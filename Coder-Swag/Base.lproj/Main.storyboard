@@ -25,24 +25,40 @@
                                 <rect key="frame" x="0.0" y="65" width="375" height="558"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="134" id="Gyi-iB-4n9">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="134"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="Gyi-iB-4n9" customClass="CategoryCell" customModule="Coder_Swag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gyi-iB-4n9" id="ZIp-ib-Zyx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QHV-bh-WKu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="QHV-bh-WKu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-8C-PQI">
+                                                    <rect key="frame" x="125.5" y="53" width="124" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="124" id="Kjq-Wr-qPL"/>
+                                                        <constraint firstAttribute="height" constant="39" id="kj7-pK-fWd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QHV-bh-WKu" firstAttribute="leading" secondItem="ZIp-ib-Zyx" secondAttribute="leading" id="0Jy-ww-YHp"/>
                                                 <constraint firstAttribute="bottom" secondItem="QHV-bh-WKu" secondAttribute="bottom" id="FtI-3f-vaZ"/>
+                                                <constraint firstItem="95Z-8C-PQI" firstAttribute="centerX" secondItem="ZIp-ib-Zyx" secondAttribute="centerX" id="I31-Da-msw"/>
                                                 <constraint firstAttribute="trailing" secondItem="QHV-bh-WKu" secondAttribute="trailing" id="OQE-3v-34g"/>
                                                 <constraint firstItem="QHV-bh-WKu" firstAttribute="top" secondItem="ZIp-ib-Zyx" secondAttribute="top" id="lMB-o5-D5N"/>
+                                                <constraint firstItem="95Z-8C-PQI" firstAttribute="centerY" secondItem="ZIp-ib-Zyx" secondAttribute="centerY" id="xWl-0w-9v2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="QHV-bh-WKu" id="Igt-rl-ZUk"/>
+                                            <outlet property="categoryTitle" destination="95Z-8C-PQI" id="GTt-hl-2QR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -59,6 +75,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="FfL-Xb-q1m"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="8tW-E0-ugf" id="bjg-L3-qVd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,4 +106,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="digital" width="1024" height="703"/>
+    </resources>
 </document>
